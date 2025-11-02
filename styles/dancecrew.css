@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+img {
+  border-radius: 12px;
+  cursor: pointer;
+}

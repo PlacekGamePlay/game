@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strongererer Monstererers</title>
+  <link rel="stylesheet" href="styles/monstre.css" />
+</head>
+
+<body>
+  <div id="box">
+    <img src="images/firstframe.png" alt="attack" id="gif">
+  </div>
+
+  <audio id="song" src="audios/anticipation.mp3" loop></audio>
+
+  <script>
+    const gif = document.getElementById("gif");
+    const song = document.getElementById("song");
+
+    song.volume = 0.5;
+
+    gif.addEventListener("click", () => {
+      gif.src = "images/sharkattack.gif";
+
+      song.play();
+
+      gif.style.pointerEvents = "none";
+    });
+  </script>
+</body>
+</html>
