@@ -10,24 +10,9 @@
 
 <body>
   <div id="box">
-    <img src="images/firstframe.png" alt="attack" id="gif">
+      <video id="video" src="videos/anticipation.mp4" controls></video>
+
   </div>
 
-  <audio id="song" src="audios/anticipation.mp3" loop></audio>
-
-  <script>
-    const gif = document.getElementById("gif");
-    const song = document.getElementById("song");
-
-    song.volume = 0.5;
-
-    gif.addEventListener("click", () => {
-      gif.src = "images/sharkattack.gif";
-
-      song.play();
-
-      gif.style.pointerEvents = "none";
-    });
-  </script>
 </body>
 </html>
