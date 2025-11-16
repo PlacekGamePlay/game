@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/bg.png");
+  background-size: auto;
+  background-position: center;
+  font-family: 'Undertale', sans-serif;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+header {
+  background-image: url("../images/bg2.png");
+  background-position-x: center;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 1));
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+#menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#menu a {
+  font-family: 'Undertale', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 1));
+  transition: 0.15s;
+}
+
+#menu a:hover {
+  color: red;
+}
+
+#wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#love {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  margin-top: -10px;
+  align-items: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#loved {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: gray;
+  margin-top: -10px;
+  align-items: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  position: relative;
+  top: 125px;
+}
+
+#lover {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: gray;
+  margin-top: -10px;
+  align-items: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding-bottom: 15px; 
+  position: relative;
+}
+
+#transition {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px; 
+  user-select: none;
+  pointer-events: none;
+}
+
+#rights {
+  color: gray;
+  font-size: 18px;
+  text-align: center;
+  pointer-events: none;
+  margin: 0;
+}
+
+#images {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#images img {
+  width: 50%;     
+  max-width: 240px; 
+  height: auto;
+}
+
+
+#imagesBig {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#imagesBig img {
+  width: 100%;     
+  max-width: 480px; 
+  height: auto;
+}
+
+
+
+@media (max-width: 596px) {
+  .menu {
+    gap: 40px;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #logo img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  #love {
+    font-size: 16px;
+  }
+
+  #rights{
+      font-size: 14px;
+  }
+
+  #lover, #loved{
+    font-size: 12px;
+  }
+}
