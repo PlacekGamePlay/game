@@ -18,15 +18,12 @@ body {
   color: white;
   font-size: 20px;
   background-color: black;
-  overflow-y: scroll;
-  scrollbar-width: none;
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100dvh;
-  -ms-overflow-style: none;
 }
 
 header {
