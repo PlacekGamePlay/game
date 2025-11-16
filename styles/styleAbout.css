@@ -150,6 +150,22 @@ footer {
 }
 
 
+#imagesBig {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#imagesBig img {
+  width: 100%;     
+  max-width: 480px; 
+  height: auto;
+}
+
+
 
 @media (max-width: 596px) {
   .menu {
