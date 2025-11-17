@@ -84,7 +84,6 @@ header {
 }
 
 #love {
-  display: flex;
   justify-content: center;
   font-size: 22px;
   margin-top: -10px;
@@ -92,6 +91,7 @@ header {
   text-align: center;
   margin-left: 25px;
   margin-right: 25px;
+  line-height: 1.6;
 }
 
 footer {
@@ -100,15 +100,15 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
-  padding-bottom: 15px; 
+  justify-content: center;
+  padding-bottom: 15px;
   position: relative;
 }
 
 #transition {
   width: 100%;
   height: auto;
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
   user-select: none;
   pointer-events: none;
 }
@@ -169,6 +169,17 @@ footer {
   color: #aaa;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.15s;
+}
+
+a:hover {
+  color: red;
+}
+
+
 
 @media (max-width: 596px) {
   .menu {
@@ -190,11 +201,19 @@ footer {
     min-width: 100px;
   }
 
-    #love {
+  #love {
     font-size: 16px;
   }
 
-  #rights{
-      font-size: 14px;
+  #rights {
+    font-size: 14px;
+  }
+
+  #menu a {
+    font-size: 18px;
+  }
+
+  #devlogs {
+    top: 50px;
   }
 }

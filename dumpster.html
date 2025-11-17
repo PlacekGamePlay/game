@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumpster</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="styles/styleDumpster.css" />
+</head>
+
+<body>
+
+    <div id="text" class="centerText hidden"></div>
+    <img id="soul" src="images/soul.png" class="hidden">
+    <img id="dump" src="images/dump.png" class="hidden">
+
+
+    <script>
+        const colors = [
+            { hex: "#ff0000", name: "Red" },
+            { hex: "#a349a4", name: "Purple" },
+            { hex: "#85a3d8", name: "Cyan" },
+            { hex: "#1b215a", name: "Blue" },
+            { hex: "#b55515", name: "Orange" },
+            { hex: "#a6a6a6", name: "Gray" },
+            { hex: "#58ae98", name: "Green" }
+        ];
+
+        const chosen = colors[Math.floor(Math.random() * colors.length)];
+
+        document.body.setAttribute("style", `background-color: ${chosen.hex};`);
+
+        const text = document.getElementById("text");
+
+        if (chosen.hex === "#ff0000") {
+            text.classList.add("hidden");
+
+            const soul = document.getElementById("soul");
+            soul.style.display = "block";
+
+            soul.addEventListener("click", () => {
+                window.location.href = "diagnosis.html";
+            });
+
+        }
+        else if (chosen.hex === "#58ae98") {
+            text.classList.add("hidden");
+
+            const dump = document.getElementById("dump");
+            dump.style.display = "block";
+
+            dump.addEventListener("click", () => {
+                window.location.href = "policewarrant.html";
+            });
+        }
+        else {
+            text.innerHTML = `
+        <p>${chosen.name}.</p>
+        <p>That is how you remember it.</p>
+        <p>But isn't something missing?</p>
+    `;
+            text.classList.remove("hidden");
+        }
+    </script>
+
+
+</body>
+
+</body>
+
+</html>
