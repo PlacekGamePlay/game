@@ -6,24 +6,18 @@
   font-display: swap;
 }
 
-html, body {
-  height: 100dvh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 body {
   font-family: 'Undertale', sans-serif;
   background-color: black;
   color: white;
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-img {
-  border-radius: 12px;
-  cursor: pointer;
+#hidden{
+    color:black
+}
+
+#section{
+    display: flex;
+    flex-direction: column;
 }

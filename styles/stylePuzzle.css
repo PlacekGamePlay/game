@@ -5,35 +5,43 @@
   font-style: normal;
 }
 
-body {
+html, body {
   font-family: 'Undertale', sans-serif;
   background-color: black;
   color: white;
+  height: 100%;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
-#valid{
-    font-size: 24px;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-#crossword{
-  position:relative;
-  right: 100px;
-}
-
-#jumble{
-  position:relative;
-  left: 100px;
-}
-
-#puzzle{
-  height: 98vh;
+#puzzle {
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  gap: 500px;
+  flex-wrap: nowrap;
+}
+
+
+.puzzle-item img {
+  width: 220px;
+  max-width: 80vw;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  #puzzle {
+    flex-direction: column;
+    gap: 250px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+  }
 }
