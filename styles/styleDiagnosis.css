@@ -58,7 +58,6 @@ img {
 
 @media (max-width: 600px) {
   #text p {
-    font-size: 14px;
-    margin: 25px 0;
+    font-size: 12px;
   }
 }
