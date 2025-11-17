@@ -10,9 +10,30 @@
 </head>
 
 <body>
-    <div>
-        <a href="home.html"><img src="images/peacock_placeholder.png" alt="feather"> </a>
-    </div>
+
+    <a href="home.html"><img id="feather" src="" alt=""> </a>
+
+
+    <script>
+
+        const featherImage = "images/peacock_placeholder.png"; 
+        const pippinImage = "images/pippin.png";               
+
+        const img = document.getElementById("feather");
+        const chance = Math.random() * 100;
+
+        if (chance < 95) {
+            img.src = featherImage;
+            img.alt = "feather";
+        } else {
+            img.src = pippinImage;
+            img.alt = "pippin";
+            img.style.position = "relative";
+            img.style.top = "-50px";
+        }
+
+    </script>
+
 
 </body>
 
