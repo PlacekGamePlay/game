@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="styles/styleDiagnosis.css" />
+</head>
+
+<body>
+
+    <img src="images/body.png" alt="body" id="body">
+
+    <img src="images/nerves.gif" id="nerves" class="hidden">
+
+    <div id="text" class="hidden">
+        <p>The most important thing for an artist is their colour pallete.</p>
+        <p>The sketches they draw, however beautiful they may be, are without life.</p>
+        <p>Colour can bring life or kill a painting.</p>
+        <p>A sad painting coloured red, a loving one painted blue...</p>
+        <p>It is the duty of an artist to pick their colours accordingly.</p>
+        <p>But what if they were undecided?</p>
+        <p>Is it the best to leave things monochrome, or is it better to colour it wrong?</p>
+        <p>There is no good anwser to this question, as a truly skilled artist can make anything work.</p>
+        <p>Am i an artist? Are you an artist?</p>
+        <p>If you show me your painting, I will show you mine.</p>
+    </div>
+
+    <audio id="sound" src="audios/diagnosis.wav" loop></audio>
+
+    <script>
+        document.getElementById("body").addEventListener("click", function () {
+            const body = document.getElementById("body");
+            const nerves = document.getElementById("nerves");
+            const text = document.getElementById("text");
+            const sound = document.getElementById("sound");
+
+            body.style.display = "none";
+
+            nerves.classList.remove("hidden");
+            text.classList.remove("hidden");
+
+
+            sound.volume = 0.3;
+            sound.play();
+
+            const paragraphs = text.querySelectorAll("p");
+
+            let totalDelay = 0; 
+
+            paragraphs.forEach((p) => {
+                const charCount = p.textContent.length;
+                const lineDelay = charCount * 100; 
+
+                setTimeout(() => {
+                    p.style.transition = "opacity 5s ease, color 5s ease";
+                    p.style.opacity = "1";
+                    p.style.color = "white";
+                }, totalDelay);
+
+                totalDelay += lineDelay;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

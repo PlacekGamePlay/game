@@ -16,8 +16,8 @@
 
     <script>
 
-        const featherImage = "images/peacock_placeholder.png"; 
-        const pippinImage = "images/pippin.png";               
+        const featherImage = "images/peacock_placeholder.png";
+        const pippinImage = "images/pippin.png";
 
         const img = document.getElementById("feather");
         const chance = Math.random() * 100;
@@ -30,7 +30,9 @@
             img.alt = "pippin";
             img.style.position = "relative";
             img.style.top = "-50px";
+            img.classList.add("small-on-mobile");
         }
+
 
     </script>
 
