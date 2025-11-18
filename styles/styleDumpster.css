@@ -21,17 +21,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   text-align: center;
   font-size: 24px;
-  line-height: 1.6;
-}
-
-body[style*="#dbb100"] .centerText,
-body[style*="#85a3d8"] .centerText,
-body[style*="#a349a4"] .centerText,
-body[style*="#a6a6a6"] .centerText {
-  color: black;
+  line-height: 1.25;
 }
 
 #soul {
@@ -53,4 +45,25 @@ body[style*="#a6a6a6"] .centerText {
   z-index: 5;
   display: none;  
 }
+
+body[style*="#84357d"] .centerText {
+  color: #b962b9;
+}
+
+body[style*="#85a3d8"] .centerText {
+  color: #cfdbff;
+}
+
+body[style*="#1b215a"] .centerText {
+  color:#362f79
+}
+
+body[style*="#b55515"] .centerText {
+  color:#ffa200 
+}
+
+body[style*="#8f8f8f"] .centerText {
+  color:#a6a6a6
+}
+
 
