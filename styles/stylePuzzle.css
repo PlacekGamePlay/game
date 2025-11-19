@@ -22,7 +22,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 500px;
+  gap: 250px;
   flex-wrap: nowrap;
 }
 
@@ -37,11 +37,41 @@ html, body {
 @media (max-width: 850px) {
   #puzzle {
     flex-direction: column;
-    gap: 250px;
+    gap: 100px;
     height: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100dvh;
   }
+}
+
+#container {
+    position: relative;
+    width: 6px;
+    height: 6px;
+}
+
+#barrier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: rgb(6, 6, 6);
+    z-index: 10;
+}
+
+#g {
+    width: 6px;
+    height: 6px;
+    background: rgb(0, 255, 0);
+}
+
+#f6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
 }
