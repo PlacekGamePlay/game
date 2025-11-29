@@ -39,15 +39,18 @@ slotImg.addEventListener('click', () => {
     audioText.onended = null;
     jackpotAudio.onended = null;
 
-    if (chance < 0.75) {
+    if (chance < 0.85) {
         prize.textContent = "you suck.";
+
         audioLost.currentTime = 0;
+        audioLost.volume = 0.25;
         audioLost.play();
 
     } else if (chance < 0.99) {
         const randomAward = textAwards[Math.floor(Math.random() * textAwards.length)];
         prize.textContent = randomAward;
         audioText.currentTime = 0;
+        audioText.volume = 0.25;
         audioText.play();
 
     } else {
@@ -63,3 +66,4 @@ slotImg.addEventListener('click', () => {
         };
     }
 });
+//
