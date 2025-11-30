@@ -44,6 +44,8 @@ img {
 
 #slot {
   display: block;
+  position: relative;
+  right: 25px;
 }
 
 #prize {
