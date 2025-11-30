@@ -5,7 +5,8 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   font-family: 'Undertale', sans-serif;
   background-color: black;
   color: white;
@@ -44,34 +45,62 @@ html, body {
     text-align: center;
     min-height: 100dvh;
   }
+
+  #crossword {
+    width: 50%;
+  }
+
+  #jumble {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1350px) {
+  #puzzle {
+    gap: 25px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+  }
+
+  #crossword {
+    width: 75%;
+  }
+
+  #jumble {
+    width: 75%;
+  }
 }
 
 #container {
-    position: relative;
-    width: 6px;
-    height: 6px;
+  position: relative;
+  width: 6px;
+  height: 6px;
 }
 
 #barrier {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    background: rgb(6, 6, 6);
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: rgb(6, 6, 6);
+  z-index: 10;
 }
 
 #g {
-    width: 6px;
-    height: 6px;
-    background: rgb(0, 255, 0);
+  width: 6px;
+  height: 6px;
+  background: rgb(0, 255, 0);
 }
 
 #f6 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+
 }
