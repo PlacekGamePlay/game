@@ -39,13 +39,13 @@ if (chosen.hex === "#ff0000" && soul) {
     soul.style.display = "block";
     soul.style.cursor = "pointer";
     soul.addEventListener("click", () => {
-        window.location.href = "diagnosis.html";
+        window.location.href = "diagnosis";
     });
 } else if (chosen.hex === "#58ae98" && dump) {
     dump.style.display = "block";
     dump.style.cursor = "pointer";
     dump.addEventListener("click", () => {
-        window.location.href = "policewarrant.html";
+        window.location.href = "policewarrant";
     });
 } else {
     text.innerHTML = `
