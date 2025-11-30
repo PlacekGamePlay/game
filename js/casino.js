@@ -125,6 +125,8 @@ slotImg.addEventListener('click', () => {
             goSiteAudio.play();
             slotImg.src = "images/slotDead.png";
             goSiteAudio.onended = () => {
+                jackpotTriggered = false;
+                slotImg.src = "images/slotMachine.png";
                 window.location.href = randomSite;
             };
 
