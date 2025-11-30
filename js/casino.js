@@ -7,15 +7,13 @@ const sites = [
 ];
 
 const textAwards = [
-    "this is prize 1",
-    "this is prize 2",
-    "this is prize 3",
-    "this is prize 4",
-    "this is prize 5",
-    "this is prize 6",
-    "this is prize 7",
-    "this is prize 8",
-    "this is prize 9"
+    "10G. That's somethin' alright.",
+    "25G. Get me some Nice Cream!",
+    "50G! We're getting there!",
+    "120G! That can get you to teleport!",
+    "250G. Nice.",
+    "500G... It's... Congrats, dude.",
+    "999G Are you ******* kidding me?!"
 ];
 
 const slotImg = document.getElementById('slot');
@@ -24,12 +22,16 @@ const prize = document.getElementById('prize');
 const audioLost = document.getElementById('audioLost');
 const audioText = document.getElementById('audioText');
 const jackpotAudio = document.getElementById('jackpot');
+const audioStock = document.getElementById('stock');
+const goSiteAudio = document.getElementById('gosite');
 
 let jackpotTriggered = false;
+let prizeWins = 0;
 
 slotImg.addEventListener('click', () => {
 
     if (jackpotTriggered) return;
+    if (prizeWins >= 3) return;
 
     prize.textContent = "";
 
@@ -39,31 +41,71 @@ slotImg.addEventListener('click', () => {
     audioText.onended = null;
     jackpotAudio.onended = null;
 
-    if (chance < 0.85) {
-        prize.textContent = "you suck.";
-
+    if (chance < 0.63) {
+        prize.textContent = "Didn't get anything. One more?";
         audioLost.currentTime = 0;
         audioLost.volume = 0.25;
         audioLost.play();
+    }
+    else if (chance < 0.89) {
+        const prizeChance = Math.random() * 26;
+        let selectedPrize;
 
-    } else if (chance < 0.99) {
-        const randomAward = textAwards[Math.floor(Math.random() * textAwards.length)];
-        prize.textContent = randomAward;
+        if (prizeChance < 7.5) selectedPrize = textAwards[0];
+        else if (prizeChance < 13) selectedPrize = textAwards[1];
+        else if (prizeChance < 18) selectedPrize = textAwards[2];
+        else if (prizeChance < 22) selectedPrize = textAwards[3];
+        else if (prizeChance < 25) selectedPrize = textAwards[4];
+        else selectedPrize = textAwards[5];
+
+        jackpotTriggered = true;
+        prize.textContent = selectedPrize;
         audioText.currentTime = 0;
-        audioText.volume = 0.25;
+        audioText.volume = 0.15;
         audioText.play();
 
-    } else {
+        audioText.onended = () => {
+            jackpotTriggered = false;
+        };
+
+        prizeWins++;
+    }
+    else if (chance < 0.90) {
         jackpotTriggered = true;
+        prize.textContent = textAwards[6];
 
         jackpotAudio.currentTime = 0;
         jackpotAudio.volume = 0.1;
         jackpotAudio.play();
 
         jackpotAudio.onended = () => {
-            const randomSite = sites[Math.floor(Math.random() * sites.length)];
+            audioStock.volume = 0.15;
+            audioStock.play();
+            prize.textContent = "";
+            slotImg.src = "images/outStock.png";
+        };
+
+    }
+    else {
+        const randomSite = sites[Math.floor(Math.random() * sites.length)];
+        jackpotTriggered = true;
+
+        goSiteAudio.volume = 0.15;
+        goSiteAudio.play();
+        goSiteAudio.onended = () => {
             window.location.href = randomSite;
+        };
+
+
+    }
+
+    if (prizeWins >= 3) {
+        jackpotTriggered = true;
+        audioText.onended = () => {
+            audioStock.volume = 0.15;
+            audioStock.play();
+            prize.textContent = "";
+            slotImg.src = "images/outStock.png";
         };
     }
 });
-//
