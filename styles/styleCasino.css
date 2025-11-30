@@ -71,10 +71,11 @@ img {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 75%;
+    width: 50%;
   }
 
   #prize {
     font-size: 14px;
   }
+
 }
