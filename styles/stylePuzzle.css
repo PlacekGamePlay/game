@@ -19,6 +19,7 @@ body {
 }
 
 #puzzle {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,13 +46,6 @@ body {
     min-height: 100dvh;
   }
 
-  #crossword {
-    width: 50%;
-  }
-
-  #jumble {
-    width: 50%;
-  }
 }
 
 @media (max-width: 1350px) {
@@ -64,13 +58,14 @@ body {
     min-height: 100dvh;
   }
 
-  #crossword {
-    width: 75%;
+    #crossword {
+    width: 50%;
   }
 
   #jumble {
-    width: 75%;
+    width: 50%;
   }
+
 }
 
 #container {
