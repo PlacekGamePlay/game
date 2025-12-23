@@ -193,9 +193,13 @@ footer {
   font-size: 18px;
   font-family: 'UndertaleTwo', sans-serif;
   max-width: 700px;
-  line-height: 2;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+#yap p{
+  line-height: 3;
+  margin: 0 0 -0.5px 0;
 }
 
 #txt {
@@ -205,6 +209,7 @@ footer {
   margin-left: 25px;
   margin-right: 25px;
 }
+
 
 #txt img {
   max-height: 400px;
