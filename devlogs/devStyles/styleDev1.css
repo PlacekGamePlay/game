@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'UndertaleTwo';
+  src: url('../../fonts/undertale-dotumche.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   margin: 0;
@@ -17,6 +25,8 @@ body {
   color: white;
   font-size: 20px;
   background-color: black;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -34,7 +44,6 @@ header {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 1));
-  position: sticky;
   top: 0;
   z-index: 999;
   flex-shrink: 0;
@@ -74,7 +83,7 @@ header {
 #logo {
   display: flex;
   justify-content: center;
-  padding: 20px 0 10px 0;
+  padding: 40px 0 10px 0;
 }
 
 #logo img {
@@ -120,76 +129,95 @@ footer {
   margin: 0;
 }
 
-#devlog {
+#song {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #000000;
-  color: white;
-  padding: 20px 20px;
-  border: 4px solid white;
-  width: auto;
-  min-width: 525px;
-  max-width: 80vw;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  transition: 0.15s;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-#devlogs {
-  position: relative;
-  top: 100px;
+#song a img {
+  max-height: 400px;
+  max-width: 100%;
 }
 
-#devImage {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-#devContent {
+#song a {
   display: flex;
   flex-direction: column;
-}
-
-#devTitle {
-  margin: 0;
-  font-size: 18px;
-  color: red;
-}
-
-#devDesc {
-  margin: 2px 0;
-  font-size: 16px;
-}
-
-#devDate {
-  margin: 0;
-  font-size: 12px;
-  color: #aaa;
-}
-
-a {
+  align-items: center;
+  text-align: center;
+  gap: 10px;
   color: white;
   text-decoration: none;
+  font-size: 24px;
   transition: 0.15s;
 }
 
-a:hover {
+#song a:hover {
   color: red;
+  transform: scale(1.01);
 }
 
-#devlog:hover {
-  border-color: red;
-  cursor: pointer;
+#songWide {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
+#songWide a img {
+  max-height: 350px;
+  max-width: 100%;
+}
 
+#songWide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  transition: 0.15s;
+}
 
+#songWide a:hover {
+  color: red;
+  transform: scale(1.01);
+}
+
+#yap {
+  font-size: 18px;
+  font-family: 'UndertaleTwo', sans-serif;
+  max-width: 700px;
+  line-height: 2;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#txt {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 20px 0;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#txt img {
+  max-height: 400px;
+  max-width: 100%;
+}
 
 @media (max-width: 596px) {
   .menu {
     gap: 40px;
+  }
+
+  #yap {
+    font-size: 12px;
   }
 
   #logo {
@@ -201,10 +229,6 @@ a:hover {
   #logo img {
     max-width: 90%;
     height: auto;
-  }
-
-  #devlog {
-    min-width: 100px;
   }
 
   #love {
@@ -219,7 +243,28 @@ a:hover {
     font-size: 18px;
   }
 
-  #devlogs {
-    top: 50px;
+  #song a img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  #songWide a img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #txt img {
+    max-height: 80%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  #songWide a {
+    font-size: 18px;
+  }
+
+  #song a {
+    font-size: 18px;
   }
 }
