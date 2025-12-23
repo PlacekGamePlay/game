@@ -133,13 +133,10 @@ footer {
   display: flex;
   justify-content: center;
   padding: 20px 0 10px 0;
-  margin-left: 25px;
-  margin-right: 25px;
 }
 
 #song a img {
-  max-height: 400px;
-  max-width: 100%;
+  width: 75%;
 }
 
 #song a {
@@ -150,8 +147,9 @@ footer {
   gap: 10px;
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: clamp(14px, 3vw, 24px);
   transition: 0.15s;
+  font-family: 'Undertale', sans-serif;
 }
 
 #song a:hover {
@@ -163,14 +161,10 @@ footer {
   display: flex;
   justify-content: center;
   padding: 20px 0 10px 0;
-  margin-left: 25px;
-  margin-right: 25px;
-  
 }
 
 #songWide a img {
-  max-height: 350px;
-  max-width: 100%;
+  width: 100%;
 }
 
 #songWide a {
@@ -181,8 +175,9 @@ footer {
   gap: 10px;
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: clamp(14px, 3vw, 24px);
   transition: 0.15s;
+  font-family: 'Undertale', sans-serif;
 }
 
 #songWide a:hover {
@@ -198,12 +193,12 @@ footer {
   padding-right: 50px;
 }
 
-#yap p{
+#yap p {
   line-height: 2.9;
   margin: 0 0 -0.5px 0;
 }
 
-#cough{
+#cough {
   font-size: 12px;
   color: gray;
 }
@@ -215,7 +210,6 @@ footer {
   margin-left: 25px;
   margin-right: 25px;
 }
-
 
 #txt img {
   max-height: 400px;
@@ -235,9 +229,31 @@ footer {
   max-width: 100%;
 }
 
-  #cough{
+#cough {
   color: gray;
   font-size: 12px;
+}
+
+#vid {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  max-width: 700px;
+}
+
+#vid video {
+  width: 100%;
+}
+
+#imagesFull {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  max-width: 700px;
+}
+
+#imagesFull img {
+  width: 100%;
 }
 
 
@@ -273,15 +289,6 @@ footer {
     font-size: 18px;
   }
 
-  #song a img {
-    max-width: 90%;
-    max-height: 90%;
-  }
-
-  #songWide a img {
-    max-width: 100%;
-    max-height: 100%;
-  }
 
   #txt img {
     max-height: 80%;
@@ -291,19 +298,8 @@ footer {
     max-height: 80%;
   }
 
-  #cough{
-  font-size: 8px;
-}
-
-
-}
-
-@media (max-width: 500px) {
-  #songWide a {
-    font-size: 18px;
+  #cough {
+    font-size: 8px;
   }
 
-  #song a {
-    font-size: 18px;
-  }
 }
