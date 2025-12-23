@@ -165,6 +165,7 @@ footer {
   padding: 20px 0 10px 0;
   margin-left: 25px;
   margin-right: 25px;
+  
 }
 
 #songWide a img {
@@ -198,8 +199,13 @@ footer {
 }
 
 #yap p{
-  line-height: 3;
+  line-height: 2.9;
   margin: 0 0 -0.5px 0;
+}
+
+#cough{
+  font-size: 12px;
+  color: gray;
 }
 
 #txt {
@@ -278,6 +284,11 @@ footer {
   #images img {
     max-height: 80%;
   }
+
+  #cough{
+  font-size: 8px;
+}
+
 
 }
 
