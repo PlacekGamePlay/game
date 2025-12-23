@@ -211,6 +211,19 @@ footer {
   max-width: 100%;
 }
 
+#images {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 20px 0;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#images img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
 @media (max-width: 596px) {
   .menu {
     gap: 40px;
@@ -254,6 +267,10 @@ footer {
   }
 
   #txt img {
+    max-height: 80%;
+  }
+
+  #images img {
     max-height: 80%;
   }
 
