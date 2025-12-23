@@ -235,6 +235,12 @@ footer {
   max-width: 100%;
 }
 
+  #cough{
+  color: gray;
+  font-size: 12px;
+}
+
+
 @media (max-width: 596px) {
   .menu {
     gap: 40px;
