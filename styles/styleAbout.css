@@ -237,6 +237,10 @@ a:hover {
   }
 
   #images {
-    gap: 0px;
+    gap: 25px;
+  }
+
+  #imagesBig{
+    width: 75%;
   }
 }
