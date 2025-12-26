@@ -256,7 +256,7 @@ footer {
   width: 100%;
 }
 
-#learntoread p{
+#learntoread p {
   color: rgb(255, 222, 0);
   font-size: 30px;
   font-family: 'Undertale', sans-serif;
@@ -308,6 +308,10 @@ footer {
 
   #cough {
     font-size: 8px;
+  }
+
+  #learntoread p {
+    font-size: 18px;
   }
 
 }
