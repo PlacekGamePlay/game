@@ -256,6 +256,14 @@ footer {
   width: 100%;
 }
 
+#learntoread p{
+  color: rgb(255, 222, 0);
+  font-size: 30px;
+  font-family: 'Undertale', sans-serif;
+  text-align: center;
+  line-height: 2;
+}
+
 
 @media (max-width: 596px) {
   .menu {
