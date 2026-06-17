@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '8bit';
+  src: url('../fonts/8bitOperatorPlus-Regular.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Undertale', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  overflow-y: auto;
+  background-color: red;
+}
+
+.centerText {
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
