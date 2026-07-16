@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+
+    grid-template-columns: repeat(28, 50px);
+    gap: 15px;
+}
+
+.grid img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (min-width: 2000px) {
+    .grid {
+        grid-template-columns: repeat(30, 50px);
+    }
+}
+
+@media (max-width: 596px) {
+    .grid {
+        grid-template-columns: repeat(4, 75px);
+    }
+
+    .grid img {
+        width: 75px;
+        height: 75px;
+    }
+}

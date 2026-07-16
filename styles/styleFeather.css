@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Undertale', sans-serif;
+  background-color: rgb(1, 0, 255);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+#hidden{
+    color:black
+}
+
+#section{
+    display: flex;
+    flex-direction: column;
+}

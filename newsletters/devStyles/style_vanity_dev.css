@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../../fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '8bit';
+  src: url('../../fonts/8bitOperatorPlus-Regular.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-size: auto;
+  background-position: center;
+  font-family: 'Undertale', sans-serif;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(0, 0, 0);
+  background-attachment: fixed;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  background-image: url("../../images/bg2.png");
+  background-position-x: center;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 1));
+  top: 0;
+  z-index: 999;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+#wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 568px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+p {
+  text-align: left;
+  font-family: '8bit', sans-serif;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+p a {
+  color: red;
+}
+
+li {
+  list-style: square;
+  font-family: '8bit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.logo {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.newsletter img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 40px
+}
+
+.sectionTitle img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.images {
+  max-width: 568px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.images img {
+  height: auto;
+  display: block;
+}
+
+.linkButton p {
+  border: 2px solid #ff0000;
+  padding: 10px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.songWide {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.songWide a img {
+  width: 100%;
+}
+
+.songWide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Undertale', sans-serif;
+}
+
+.cough {
+  font-size: 14px;
+  color: gray;
+}
+
+.imagesFull {
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.imagesFull img {
+  width: 100%;
+}
+
+.music {
+  display: flex;
+  justify-content: center;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+.musicName{
+  font-family: 'Undertale';
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: -15px;
+}
+
+.icon {
+  width: 15%;
+  height: auto;
+  max-width: 100px;
+  margin-left: 10px;
+}
+
+.circus{
+  text-decoration: none;
+  color: black;
+}
+
+.jamess {
+  color: #ffb1dd;
+}
+
+.emerald {
+  color: #C4FFE0;
+}
+
+@media (max-width: 596px) {
+
+  #logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #logo img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  #txt img {
+    max-height: 80%;
+  }
+
+  #images img {
+    max-height: 80%;
+  }
+
+  #cough {
+    font-size: 8px;
+  }
+
+  #wrapper {
+    max-width: calc(100% - 30px);
+  }
+
+}

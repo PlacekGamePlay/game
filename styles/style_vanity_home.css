@@ -1,0 +1,85 @@
+.recollections {
+  position: relative;
+  top: 100px;
+}
+
+.recollection {
+  /* STRUCTURE */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: auto;
+  min-width: 525px;
+  max-width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  /* BOX */
+  background-color: #000000;
+  color: white;
+  padding: 20px 20px;
+  border: 4px solid white;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
+  transition: 0.15s;
+}
+
+.recollection img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.recContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.recTitle {
+  margin: 0;
+  font-size: 18px;
+  color: #ff0001;
+}
+
+.recDesc {
+  margin: 2px 0;
+  font-size: 16px;
+}
+
+.recDate {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.recollection:hover {
+  border-color: #ff0001;
+  cursor: pointer;
+  transform: scale(1.015);
+}
+
+@media (max-width: 596px) {
+
+  .recollection {
+    width: 85vw;
+    max-width: 85vw;
+    min-width: 85vw;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .recollections {
+    top: 50px;
+  }
+
+  .recTitle {
+    font-size: 14px;
+  }
+
+  .recDesc {
+    font-size: 12px;
+  }
+
+  .recDate {
+    font-size: 10px;
+  }
+}

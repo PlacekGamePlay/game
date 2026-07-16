@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>All Is Vanity</title>
     <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="stylesheet" href="styles/styleHome.css" />
+
+    <link rel="stylesheet" href="styles/style_vanity_base.css">
+    <link rel="stylesheet" href="styles/style_vanity_home.css">
 </head>
 
 <body>
-
     <header>
         <nav id="menu">
             <a href="about">ABOUT</a>
@@ -19,50 +21,42 @@
         </nav>
     </header>
 
-    <div id="wrapper">
-        <section id="logo">
-            <a href="https://placekthestar.com"><img src="images/logo.png" alt="Logo"></a>
+    <main id="wrapper">
+
+        <section class="logo">
+            <a href="https://placekthestar.com">
+                <img src="images/logo.png" alt="All Is Vanity Logo">
+            </a>
         </section>
 
-            <p id="love">A representation of a fan's love towards <a href="https://undertale.com">UNDERTALE</a>.</p>
-            <p id="love">Releasing in three chapters, <a href="dumpster">the first one</a> coming out sometime in 2026.</p>
+        <p class="message">
+            A representation of a fan's love towards <a href="https://undertale.com">UNDERTALE</a>.
+            <br>
+            Releasing in three chapters, <a href="spring">the first one</a> coming out sometime in 2026.
+        </p>
 
-        <br><br>
+        <section class="recollections">
+            <a href="newsletters/christmas2025">
+                <article class="recollection">
+                    <img src="newsletters/devImages/!devLogo/devlogImg1.png" alt="Recollection">
 
-        <div id="devlogs">
-
-            <a href="devlogs/devlog1">
-            <div id="devlog">
-                <img src="devlogs/devImages/!devLogo/devlogImg1.png" alt="devlog" id="devImage">
-                <div id="devContent">
-                    <p id="devTitle">Devlog 1</p>
-                    <p id="devDesc">It won't hurt for long.</p>
-                    <p id="devDate">December 25th, 2025</p>
-                </div>
-            </div>
+                    <div class="recContent">
+                        <p class="recTitle">Newsletter 1</p>
+                        <p class="recDesc">* It won't hurt for long.</p>
+                        <p class="recDate">December 25th, 2025</p>
+                    </div>
+                </article>
             </a>
-            </div>
+        </section>
+        
 
+    </main>
 
-
-
-
-
-        </div>
-    </div>
-
-    <img src="images/hello.png" alt="transition" id="transition">
+    <img src="images/transition.png" alt="transition" id="transition">
 
     <footer>
-        <p id="rights">UNDERTALE ~ All Is Vanity (2024-2026)</p>
+        <p id="rights">UNDERTALE ~ All Is Vanity (2024–2026)</p>
     </footer>
-
-
-
-
-
-
-
 
 </body>
 

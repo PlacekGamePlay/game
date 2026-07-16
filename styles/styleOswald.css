@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: 'Undertale', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  height: 100%;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+#puzzle {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 250px;
+  flex-wrap: nowrap;
+}
+
+
+.puzzle-item img {
+  width: 220px;
+  max-width: 80vw;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  #puzzle {
+    flex-direction: column;
+    gap: 100px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+  }
+
+}
+
+@media (max-width: 1350px) {
+  #puzzle {
+    gap: 25px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+  }
+
+  #crossword {
+    width: 50%;
+  }
+
+  #jumble {
+    width: 50%;
+  }
+
+}
+
