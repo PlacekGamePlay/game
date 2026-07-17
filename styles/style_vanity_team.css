@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../fonts/undertale-font-rus-eng.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '8bit';
+  src: url('../fonts/8bitOperatorPlus-Regular.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#team {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#team {
+  font-size: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 0 black;
+}
+
+#memberLink {
+  text-decoration: none;
+  display: block;
+}
+
+.memberCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  border: 5px solid white;
+  width: auto;
+  min-width: 400px;
+  max-width: 400px;
+  margin: 25px auto;
+  transition: 0.15s;
+}
+
+.memberCard:hover {
+  border-color: red;
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.memberLink {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.memberContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.memberName {
+  margin: 0;
+  font-size: 24px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.memberRoles {
+  margin: 2px 0;
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+}
+
+
+
+
+@media (max-width: 596px) {
+  .member a {
+    font-size: 18px;
+  }
+  
+  .memberCard {
+    min-width: 250px;
+    max-width: 250px;
+    border: 3px solid white;
+  }
+
+  .memberName {
+    font-size: 16px;
+  }
+
+  .memberRoles {
+    font-size: 12px;
+  }
+}
