@@ -57,6 +57,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
+  background-color: black;
 }
 
 p {
@@ -169,7 +170,7 @@ li {
 
 .cough {
   font-size: 14px;
-  color: gray;
+  color: #808080;
 }
 
 .imagesFull {
@@ -226,6 +227,10 @@ li {
 
 .emerald {
   color: #C4FFE0;
+}
+
+.clazic{
+  color:#c4dcff
 }
 
 @media (max-width: 596px) {

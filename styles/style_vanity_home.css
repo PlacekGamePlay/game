@@ -1,3 +1,8 @@
+html, body {
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
 .recollections {
   position: relative;
   top: 100px;
@@ -43,6 +48,9 @@
 .recDesc {
   margin: 2px 0;
   font-size: 16px;
+
+  padding-left: 15px;
+  text-indent: -15px;
 }
 
 .recDate {
