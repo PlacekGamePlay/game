@@ -130,8 +130,9 @@ li {
 }
 
 .images img {
-  height: auto;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .linkButton p {
@@ -246,15 +247,15 @@ li {
     height: auto;
   }
 
-  #txt img {
+  .txt img {
     max-height: 80%;
   }
 
-  #images img {
+  .images img {
     max-height: 80%;
   }
 
-  #cough {
+  .cough {
     font-size: 8px;
   }
 
