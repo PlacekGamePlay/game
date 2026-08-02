@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is he?</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="styles/style_vanity_arg_circus.css" />
+</head>
+
+<body>
+
+    <div class="grid" id="grid"></div>
+
+    <script>
+        //BOXES
+        const box_default = "images/circus/box.png";
+        const box_open = "images/circus/box_open.png";
+
+        //SPECIAL BOXES
+        const box_special = "images/circus/box_special.png";
+        const box_special_here = "images/circus/box_special_here.png";
+        const box_special_found = "images/circus/box_special_found.png";
+
+        //RED BOXES
+        const box_red = "images/circus/box_red.png";
+        const box_red_here = "images/circus/box_red_shown.png";
+        const box_red_found = "images/circus/box_red_open.png";
+
+        //BLUE BOXES
+        const box_blue = "images/circus/box_blue.png";
+        const box_blue_here = "images/circus/box_blue_shown.png";
+        const box_blue_found = "images/circus/box_blue_open.png";
+
+        //PURPLE BOXES
+        const box_purple = "images/circus/box_purple.png";
+        const box_purple_here = "images/circus/box_purple_shown.png";
+        const box_purple_found = "images/circus/box_purple_open.png";
+
+        //SOUNDS
+        const win_sound = "audios/dream_echo_1.wav";
+        const wrong_sound = "audios/honk.wav";
+        const red_sound = "audios/jingle_red_box.wav";
+        const blue_sound = "audios/jingle_blue_box.mp3";
+        const purple_sound = "audios/jingle_purple_box.mp3";
+
+        //LINKS
+        const special_link = "oswald";
+        const red_link = "star";
+        const blue_link = "feather";
+        const purple_link = "heart";
+
+        //DESCS
+        const special_desc = "Resolution...";
+        const red_desc = "& & &";
+        const blue_desc = "‎";
+        const purple_desc = "Where is he?";
+        const fail_desc = "Wrong tent!";
+
+        //WINDOW FUCKERY
+        const width = window.innerWidth;
+        let total = 392;
+        if (width >= 2000) total = 450;
+        else if (width < 600) total = 32;
+
+        const grid = document.getElementById("grid");
+
+        //SCATTER
+        const specialIndex = Math.floor(Math.random() * total);
+        const redIndex = Math.floor(Math.random() * total);
+        const blueIndex = Math.floor(Math.random() * total);
+        const purpleIndex = Math.floor(Math.random() * total);
+
+        //REFERENCES
+        let special_ref = null;
+        let red_ref = null;
+        let blue_ref = null;
+        let purple_ref = null;
+
+        let end = false;
+
+        const delay = 0;
+
+        //SOUNDS
+        function playSound(src) {
+            const audio = new Audio(src);
+            audio.volume = 0.5;
+            audio.play();
+        }
+
+        //BOXES FUCKERY
+        function handleSpecial(img, foundImg, sound, link, desc, delay) {
+
+            if (end) return;
+            end = true;
+
+            playSound(sound);
+
+            document.querySelectorAll(".grid img").forEach(el => {
+                el.style.pointerEvents = "none";
+            });
+
+            img.src = foundImg;
+
+            document.querySelectorAll(".grid img").forEach(el => {
+                if (el !== img) el.style.visibility = "hidden";
+            });
+
+            document.title = desc;
+
+            setTimeout(() => {
+                window.location.href = link;
+            }, delay);
+        }
+
+        //SOMETHING
+        for (let i = 0; i < total; i++) {
+            const img = document.createElement("img");
+
+            //SPECIAL BOX
+            if (i === specialIndex) {
+                img.src = box_special;
+                special_ref = img;
+
+                img.onclick = () => handleSpecial(img, box_special_found, win_sound, special_link, special_desc, 3200);
+            }
+
+            //RED BOX
+            else if (i === redIndex) {
+                img.src = box_red;
+                red_ref = img;
+
+                img.onclick = () => handleSpecial(img, box_red_found, red_sound, red_link, red_desc, 1250);
+            }
+
+            //BLUE BOX
+            else if (i === blueIndex) {
+                img.src = box_blue;
+                blue_ref = img;
+
+                img.onclick = () => handleSpecial(img, box_blue_found, blue_sound, blue_link, blue_desc, 998);
+            }
+
+            //PURPLE BOX
+            else if (i === purpleIndex) {
+                img.src = box_purple;
+                purple_ref = img;
+
+                img.onclick = () => handleSpecial(img, box_purple_found, purple_sound, purple_link, purple_desc, 2500);
+            }
+
+            //DEFAULT BOX
+            else {
+                img.src = box_default;
+
+                img.onclick = () => {
+                    if (end) return;
+                    end = true;
+
+                    playSound(wrong_sound);
+
+                    document.querySelectorAll(".grid img").forEach(el => {
+                        el.style.pointerEvents = "none";
+                    });
+
+                    img.src = box_open;
+
+                    if (red_ref) red_ref.src = box_red_here;
+                    if (blue_ref) blue_ref.src = box_blue_here;
+                    if (purple_ref) purple_ref.src = box_purple_here;
+
+                    document.title = fail_desc;
+
+                    document.querySelectorAll(".grid img").forEach(el => {
+                        if (el !== img && el !== red_ref && el !== blue_ref && el !== purple_ref) {
+                            el.style.visibility = "hidden";
+                        }
+                    });
+
+                    setTimeout(() => location.reload(), 1200);
+                };
+            }
+
+            grid.appendChild(img);
+        }
+    </script>
+
+
+</body>
+
+</html>
